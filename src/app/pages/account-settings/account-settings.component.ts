@@ -7,6 +7,7 @@ import { DOCUMENT } from '@angular/common';
   templateUrl: './account-settings.component.html',
   styles: []
 })
+
 export class AccountSettingsComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private _document,
