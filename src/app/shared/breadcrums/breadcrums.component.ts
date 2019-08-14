@@ -27,7 +27,7 @@ export class BreadcrumsComponent implements OnInit {
 
     });
   }
-
+ 
   ngOnInit() {
   }
 

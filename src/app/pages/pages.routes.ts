@@ -1,3 +1,4 @@
+import { LoginGuardGuard } from './../services/service.index';
 import { RjxsComponent } from './rjxs/rjxs.component';
 import { PagesComponent } from './pages.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -11,6 +12,7 @@ const pagesRoutes: Routes = [
     {
         path: '',
         component: PagesComponent,
+        canActivate: [LoginGuardGuard],
         children: [
             { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard' } },
             { path: 'graficas1', component: Graficas1Component, data: { titulo: 'Graficas' } },
