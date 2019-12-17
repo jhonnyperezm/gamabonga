@@ -14,14 +14,14 @@ import { RxjsComponent } from './rxjs/rxjs.component';
 import { ProfileComponent } from './profile/profile.component';
 
 
-import { LoginGuardGuard, AdminGuard } from '../services/service.index';
+import { AdminGuard, VarificatokenGuard } from '../services/service.index';
 import { MedicoComponent } from './medicos/medico.component';
 import { BusquedaComponent } from './busqueda/busqueda.component';
 
 
 const pagesRoutes: Routes = [
 
-    { path: 'dashboard', component: DashboardComponent, data: { titulo: 'Dashboard' } },
+    { path: 'dashboard', component: DashboardComponent, canActivate: [VarificatokenGuard], data: { titulo: 'Dashboard' } },
     { path: 'progress', component: ProgressComponent, data: { titulo: 'ProgressBars' } },
     { path: 'graficas1', component: Graficas1Component, data: { titulo: 'Gráficas' } },
     { path: 'promesas', component: PromesasComponent, data: { titulo: 'Promesas' } },

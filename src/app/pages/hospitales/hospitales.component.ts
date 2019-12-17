@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class HospitalesComponent implements OnInit {
 
   hospitales: Hospital[] = [];
+  cargando: boolean;
   constructor(
     public _hospitalService: HospitalService,
     public _modalUploadService: ModalUploadService
@@ -58,8 +59,8 @@ export class HospitalesComponent implements OnInit {
       .subscribe(() => this.cargarHospital());
   }
   actualizarImagen(hospital: Hospital) {
-    console.log("sdd",hospital);
-    
+    console.log("sdd", hospital);
+
     this._modalUploadService.mostrarModal('hospitales', hospital._id);
   }
 

@@ -1,3 +1,4 @@
+export { VarificatokenGuard } from './guards/varificatoken.guard';
 export { AdminGuard } from './guards/admin.guard';
 export { MedicoService } from './medico/medico.service';
 export { LoginGuardGuard } from './guards/login-guard.guard';
